@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './portfolio.css'
 import IMG1 from '../../assets/img1.PNG'
 import IMG2 from '../../assets/img2.jpg'
+import IMG3 from '../../assets/img3.png'
+import IMG4 from '../../assets/img4.PNG'
+import IMG5 from '../../assets/img5.PNG'
 
 const data = [
     {
@@ -20,24 +23,24 @@ const data = [
     },
     {
         id: 3,
-        image: IMG1,
-        title: 'Bankist Application',
+        image: IMG3,
+        title: 'Nxt Trendz',
         github: 'https://github.com',
-        demo: 'https://victoryanonymous.github.io/bankist/'
+        demo: 'https://github.com/victoryanonymous/nxt-trendz'
     },
     {
         id: 4,
-        image: IMG2,
-        title: 'Guess My Number',
-        github: 'https://github.com',
-        demo: 'https://victoryanonymous.github.io/guessMyNumber/'
+        image: IMG4,
+        title: 'Nirmal Wooden Toys',
+        github: 'https://github.com/vinaymaggidi/NirmalToysMain',
+        demo: 'https://nirmaltoys.onrender.com'
     },
     {
         id: 5,
-        image: IMG1,
-        title: 'Bankist Application',
+        image: IMG5,
+        title: 'Todo List',
         github: 'https://github.com',
-        demo: 'https://victoryanonymous.github.io/bankist/'
+        demo: 'https://daily-todos-sz88.onrender.com/'
     },
     {
         id: 6,

@@ -4,19 +4,19 @@ import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {BsWhatsapp} from 'react-icons/bs'
 import { useRef } from 'react';
-// import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
 
     const form = useRef();
 
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    //     emailjs.sendForm('service_hb8i2yp', 'template_ny4jqp5', form.current , 'userid')
+        emailjs.sendForm('service_hb8i2yp', 'template_ny4jqp5', form.current , 'userid')
 
-    //     e.target.reset();
-    // };
+        e.target.reset();
+    };
 
     return(
         <section id="contact">
@@ -48,7 +48,7 @@ const Contact = () => {
                     {/* https://api.whatsapp.com/send?phone=+91-9347759131 */}
                 </div>
                 
-                <form ref={form} >  {/*onSubmit={sendEmail}*/}
+                <form ref={form} onSubmit={sendEmail} >  {/*onSubmit={sendEmail}*/}
                     <input type="text" name='name' placeholder='Your Full Name' required/>
                     <input type="email" name='email' placeholder='Your Email' required/>
                     <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
