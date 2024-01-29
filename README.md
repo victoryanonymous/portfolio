@@ -3,7 +3,7 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/victoryanonymous/Layer0x.git
+  git clone https://github.com/victoryanonymous/portfolio.git
 ```
 
 Install dependencies
