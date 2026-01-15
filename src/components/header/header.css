@@ -2,6 +2,13 @@ header {
   height: 100vh;
   padding-top: 7rem;
   overflow: hidden;
+  position: relative;
+  /* Beautiful background gradient */
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(77, 181, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(77, 181, 255, 0.08) 0%, transparent 50%),
+    var(--color-bg);
+  background-attachment: fixed;
 }
 
 
@@ -9,6 +16,83 @@ header {
   text-align: center;
   height: 100%;
   position: relative;
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+/* Slide down animation */
+.slide-down {
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+.slide-down.delay-1 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.slide-down.delay-2 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.slide-down.delay-3 {
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+/* Slide left animation */
+.slide-left {
+  animation: slideLeft 0.8s ease-out forwards;
+}
+
+/* Image zoom in animation */
+.image-zoom-in {
+  animation: imageZoomIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes imageZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 /* =========== CV ========= */
@@ -39,15 +123,192 @@ header {
 
 /* ========== ME =========*/
 .me {
-  background: linear-gradient(var(--color-primary), transparent);
   width: 22rem;
   height: 30rem;
-  position:inherit;
+  position: relative;
   left: calc(50% - 11rem);
   margin-top: 4rem;
-  border-radius: 12rem 12rem 0 0;
+  border-radius: 2rem;
   overflow: hidden;
-  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  padding: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Beautiful gradient background */
+  background: linear-gradient(
+    135deg,
+    rgba(77, 181, 255, 0.1) 0%,
+    rgba(77, 181, 255, 0.05) 50%,
+    transparent 100%
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 8px 32px rgba(77, 181, 255, 0.2),
+    0 0 0 1px rgba(77, 181, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Beautiful decorative elements */
+.me::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-primary-variant),
+    var(--color-primary),
+    transparent,
+    var(--color-primary)
+  );
+  background-size: 300% 300%;
+  border-radius: 2rem;
+  z-index: -1;
+  opacity: 0.5;
+  animation: gradientShift 8s ease infinite;
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.me::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(77, 181, 255, 0.15) 0%,
+    transparent 50%
+  );
+  border-radius: 2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Apply zoom-in animation first, then float */
+.me.image-zoom-in {
+  animation: imageZoomIn 1s ease-out forwards, float 6s ease-in-out infinite 1s;
+}
+
+.me:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(77, 181, 255, 0.4),
+    0 0 0 1px rgba(77, 181, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  animation: imageZoomIn 1s ease-out forwards, floatHover 6s ease-in-out infinite 1s;
+}
+
+.me:hover::before {
+  opacity: 0.8;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes floatHover {
+  0%, 100% {
+    transform: translateY(-10px) scale(1.02);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.02);
+  }
+}
+
+.img-me {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 0;
+  /* Enhance image visibility - reduce background prominence */
+  filter: contrast(1.1) saturate(1.15) brightness(1.05);
+  /* Create depth with shadow */
+  box-shadow: 
+    inset 0 0 50px rgba(0, 0, 0, 0.3),
+    0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.me:hover .img-me {
+  transform: scale(1.05);
+  filter: contrast(1.2) saturate(1.25) brightness(1.1);
+  box-shadow: 
+    inset 0 0 60px rgba(0, 0, 0, 0.2),
+    0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animated background particles */
+.me .particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: particleFloat 8s ease-in-out infinite;
+  z-index: 3;
+  box-shadow: 0 0 10px var(--color-primary);
+  pointer-events: none;
+}
+
+.me .particle:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.me .particle:nth-child(2) {
+  top: 30%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+.me .particle:nth-child(3) {
+  bottom: 20%;
+  left: 25%;
+  animation-delay: 4s;
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-10px);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-20px) translateX(5px);
+    opacity: 0.7;
+  }
 }
 
 
@@ -66,6 +327,12 @@ header {
   header {
     height: 68vh;
   }
+  
+  .me {
+    width: 20rem;
+    height: 28rem;
+    left: calc(50% - 10rem);
+  }
 }
 
 /* ============ MEDIA QUERIES(SMALL DEVICES) =========== */
@@ -73,8 +340,21 @@ header {
   header {
     height: 100vh;
   }
+  
   .header__socialmedia,
   .scroll__down {
     display: none;
+  }
+  
+  .me {
+    width: 18rem;
+    height: 25rem;
+    left: calc(50% - 9rem);
+    margin-top: 2rem;
+    padding: 0;
+  }
+  
+  .me:hover {
+    transform: translateY(-5px) scale(1.02);
   }
 }

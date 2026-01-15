@@ -58,6 +58,11 @@ input, textarea {
     color: var(--color-white);
 }
 
+.contact__status {
+    font-size: 0.9rem;
+    color: var(--color-light);
+}
+
 /* ============ MEDIA QUERIES(MEDIUM DEVICES) =========== */
 @media screen and (max-width: 1024px) {
     .container.contact__container {

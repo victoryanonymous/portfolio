@@ -8,15 +8,18 @@ const Header = () => {
   return (
     <section className='header'>
       <div className="container header__container">
-        <h5 className='fade-in'>Hello I'm</h5>
-        <h1 className='fade-in'>Vinay Maggidi</h1>
-        <h5 className="text-light fade-in">Fullstack Developer</h5>
+        <h5 className='fade-in slide-down'>Hello I'm</h5>
+        <h1 className='fade-in slide-down delay-1'>Vinay Maggidi</h1>
+        <h5 className="text-light fade-in slide-down delay-2">Backend Developer</h5>
         <CV />
         <HeaderSocialMedia />
-        <div className="me fade-in">
-          <img src={ME1} alt="" className='img-me' />
+        <div className="me fade-in image-zoom-in">
+          <span className="particle"></span>
+          <span className="particle"></span>
+          <span className="particle"></span>
+          <img src={ME1} alt="Vinay Maggidi" className='img-me' />
         </div>
-        <a href="#contact" className='scroll__down fade-in'>
+        <a href="#contact" className='scroll__down fade-in slide-left delay-3'>
           Scroll Down
         </a>
       </div>

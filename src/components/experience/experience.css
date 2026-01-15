@@ -1,71 +1,287 @@
 .experience__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
 }
 
-.experience__container > div {
+/* Work Experience Section */
+.experience__work {
     background: var(--color-bg-variant);
-    padding: 2.4rem 5rem;
+    padding: 2.4rem 3rem;
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
 }
 
-.experience__container > div:hover {
+.experience__work:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
-    cursor: default;
 }
 
-.experience__container > div h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-primary);
-}
-
-.experience__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
-}
-
-.experience__details {
+.experience__header {
     display: flex;
+    align-items: center;
     gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
 }
 
-.experience__details-icon {
-    margin-top: 6px;
+.experience__icon {
+    font-size: 2rem;
     color: var(--color-primary);
+}
+
+.experience__work h3,
+.experience__projects h3 {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Experience Card */
+.experience__card {
+    background: rgba(77, 181, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-primary-variant);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.experience__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(77, 181, 255, 0.2);
+}
+
+.experience__card-header {
+    margin-bottom: 1.5rem;
+}
+
+.experience__card-header h4 {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience__company {
+    display: block;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.experience__duration {
+    color: var(--color-light);
+    font-size: 0.9rem;
+}
+
+.experience__description {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.experience__description li {
+    color: var(--color-light);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.experience__description li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.experience__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.tech-tag {
+    background: var(--color-primary-variant);
+    color: var(--color-primary);
+    padding: 0.4rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.tech-tag:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+    transform: translateY(-2px);
+}
+
+/* College Projects Section */
+.experience__projects {
+    background: var(--color-bg-variant);
+    padding: 2.4rem 3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.experience__projects:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project__card {
+    background: rgba(77, 181, 255, 0.05);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--color-primary-variant);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.project__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(77, 181, 255, 0.3);
+    border-color: var(--color-primary);
+}
+
+.project__image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project__card:hover .project__image img {
+    transform: scale(1.1);
+}
+
+.project__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(31, 31, 56, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.project__card:hover .project__overlay {
+    opacity: 1;
+}
+
+.project__content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project__content h4 {
+    color: var(--color-white);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.project__content p {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.project__period {
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.project__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag-small {
+    background: var(--color-primary-variant);
+    color: var(--color-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.8rem;
+    font-size: 0.75rem;
+    border: 1px solid var(--color-primary);
 }
 
 /* ============ MEDIA QUERIES(MEDIUM DEVICES) =========== */
 @media screen and (max-width: 1024px) {
     .experience__container {
-        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .experience__container > div {
-        width: 80%;
+    .experience__work,
+    .experience__projects {
         padding: 2rem;
-        margin: 0 auto;
     }
 
-    .experience__content {
-        padding: 1rem;
+    .projects__grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
     }
-  }
-  
-  /* ============ MEDIA QUERIES(SMALL DEVICES) =========== */
-  @media screen and (max-width: 600px) {
+}
+
+/* ============ MEDIA QUERIES(SMALL DEVICES) =========== */
+@media screen and (max-width: 600px) {
     .experience__container {
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
-    .experience__container > div {
-        width: 100%;
-        padding: 2rem 1rem;
+    .experience__work,
+    .experience__projects {
+        padding: 1.5rem 1rem;
     }
-  }
-  
+
+    .projects__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .experience__card {
+        padding: 1.5rem;
+    }
+
+    .project__overlay {
+        flex-direction: column;
+    }
+
+    .project__overlay .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

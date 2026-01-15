@@ -11,91 +11,91 @@ const Services = () => {
             <div className="container services__container">
                 <article className='service'>
                     <div className="service__head">
-                        <h3>UI/UX Design</h3>
+                        <h3>API Development</h3>
                     </div>
 
                     <ul className="service__list">
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>RESTful API Design & Development</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Node.js & Express.js Backend Services</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>API Documentation & Integration</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Third-party API Integration</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Microservices Architecture</p>
                         </li>
                     </ul>
                 </article>
 
                 <article className='service'>
                     <div className="service__head">
-                        <h3>Web Development</h3>
+                        <h3>Database & Backend</h3>
                     </div>
 
                     <ul className="service__list">
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Database Design & Management (MongoDB, MySQL)</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Query Optimization & Performance Tuning</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Server-side Logic & Business Logic Implementation</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Data Modeling & Schema Design</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Database Migration & Maintenance</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Backend Security & Best Practices</p>
                         </li>
                     </ul>
                 </article>
 
                 <article className='service'>
                     <div className="service__head">
-                        <h3>Content Creation</h3>
+                        <h3>Backend Solutions</h3>
                     </div>
 
                     <ul className="service__list">
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Authentication & Authorization Systems</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Backend Architecture Design & Implementation</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Version Control & Collaboration using Git</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Code Review & Quality Assurance</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Need To Enter Services Which You Provide</p>
+                            <p>Backend Deployment & DevOps</p>
                         </li>
                     </ul>
                 </article>
