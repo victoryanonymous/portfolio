@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './header.css';
 import CV from './CV';
 import ME1 from '../../assets/me1.jpg';
@@ -6,7 +6,7 @@ import HeaderSocialMedia from './HeaderSocialMedias';
 
 const Header = () => {
   return (
-    <section className='header'>
+    <section id="home" className='header'>
       <div className="container header__container">
         <h5 className='fade-in slide-down'>Hello I'm</h5>
         <h1 className='fade-in slide-down delay-1'>Vinay Maggidi</h1>

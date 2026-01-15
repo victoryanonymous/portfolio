@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './experience.css'
-import { BsPatchCheckFill } from 'react-icons/bs';
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 import IMG1 from '../../assets/img1.PNG'
 import IMG2 from '../../assets/img2.jpg'

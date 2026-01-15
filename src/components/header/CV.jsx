@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import cv from '../../assets/Vinay_Maggidi_Backend_Developer.pdf';
 
 const CV = () => {
