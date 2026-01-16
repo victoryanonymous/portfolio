@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container header__container">
         <h5 className='fade-in slide-down'>Hello I'm</h5>
         <h1 className='fade-in slide-down delay-1'>Vinay Maggidi</h1>
-        <h5 className="text-light fade-in slide-down delay-2">Backend Developer</h5>
+        <h5 className="text-light fade-in slide-down delay-2">Software Engineer</h5>
         <CV />
         <HeaderSocialMedia />
         <div className="me fade-in image-zoom-in">

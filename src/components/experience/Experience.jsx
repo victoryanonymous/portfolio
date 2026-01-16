@@ -12,7 +12,7 @@ const workExperience = [
     {
         id: 1,
         company: "LayerZeroX Tech Labs Pvt. Ltd.",
-        role: "Backend Developer",
+        role: "Software Engineer",
         duration: "Feb 2024 – Present (1 yr 10 mo)",
         description: [
             "Architected and maintained highly scalable backend systems leveraging Node.js and MongoDB, ensuring optimal performance and reliability for high-traffic applications while implementing efficient data models and query optimization strategies.",
