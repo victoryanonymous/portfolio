@@ -1,5 +1,5 @@
 import React from 'react';
-import cv from '../../assets/Vinay_Maggidi_Backend_Developer.pdf';
+import cv from '../../assets/Vinay_Maggidi_Software_Engineer.pdf';
 
 const CV = () => {
     return (

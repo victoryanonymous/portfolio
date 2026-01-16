@@ -13,7 +13,7 @@ const workExperience = [
         id: 1,
         company: "LayerZeroX Tech Labs Pvt. Ltd.",
         role: "Backend Developer",
-        duration: "Feb 2024 – Present (1 yr 8 mo)",
+        duration: "Feb 2024 – Present (1 yr 10 mo)",
         description: [
             "Architected and maintained highly scalable backend systems leveraging Node.js and MongoDB, ensuring optimal performance and reliability for high-traffic applications while implementing efficient data models and query optimization strategies.",
             "Engineered robust deployment infrastructure using Nginx and Caddy as reverse proxies, integrated PM2 for advanced process management and load balancing, resulting in improved system uptime and seamless horizontal scaling capabilities.",
@@ -34,8 +34,8 @@ const workExperience = [
         role: "Training and Placement Student Coordinator",
         duration: "Dec 2023 – Sep 2024 (10 mos)",
         description: [
-            "Facilitated placement drives and coordinated training initiatives",
-            "Acted as liaison between students, faculty, and companies for smooth operations"
+            "Coordinated campus placement drives and organized training sessions to help students prepare for recruitment.",
+            "Acted as a point of contact between students, faculty, and recruiting companies to ensure smooth coordination."
         ],
         technologies: ["Coordination", "Communication", "Management"]
     }
